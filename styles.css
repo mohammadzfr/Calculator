@@ -1,7 +1,9 @@
 body {
+    box-sizing: border-box;
+    background-color: #18b1cf;
     margin: 0;
     font-family: 'Quicksand', 'Roboto', sans-serif;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,24 +16,60 @@ div {
 }
 
 button {
-    background: aqua;
-    font-size: 1.325rem;
+    background-color: #18b1cf;
+    font-size: 20px;
     font-weight: 700;
-    padding: 1rem;
-    /* margin: 5px; */
-    border-radius: 100%;
+    padding: 20px;
+    margin: 2px;
+    border-radius: 8px;
     border: 0px solid transparent;
+    
+}
+button:hover {
+    /* background-color: #4a4a4a; */
+    cursor: pointer;
+}
+.operand {
+    background-color: rgb(233, 233, 113);
+}
+.misc {
+    background-color: rgb(223, 68, 68);
+}
+.equal {
+    background-color: green;
 }
 .calc {
+    background-color: whitesmoke;
     display: flex;
     flex-direction: column;
+    padding: 25px;
+    border-radius: 16px;
     /* justify-content: center; */
     /* align-items: center; */
-    /* width: 400px; */
+    /* width: 300px; */
 }
-/* 
+
+.screen {
+    height: 90px;
+    width: 330px;
+    padding: 15px;
+    margin-bottom: 30px;
+    text-align: right;
+    overflow: hidden;
+    
+}
+.top {
+    height: 30%;
+    color: #212121;
+
+}
+.bottom {
+    height: 70%;
+    margin-top: 15px;
+    font-size: 36px;
+    direction: rtl;
+}
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    text-align: center;
-} */
+}
