@@ -1,7 +1,8 @@
 // Algorithm
 
-let numberTrack;
-console.log(numberTrack);
+let input,
+    num2;
+console.log(input);
 const buttons = document.querySelectorAll("button");
 const screen = document.querySelector(".screen");
 const mainScreen = screen.children[1];
@@ -44,20 +45,24 @@ function buttonClicked() {
     }
 }
 function operandClicked(operand) {
-    if (numberTrack == null)
+    if (input == null)
         return;
-    history.textContent += `${numberTrack} ${operand.textContent} `
-    numberTrack = null;
+    if (num2 == null) {
+        history.textContent += `${input} ${operand.textContent} `
+    }
+    num2 = input;
+    
+    input = null;
     console.log("operand");
 }
 
 function numberClicked(number) {
     console.log("number");
-    if (!numberTrack)
-        numberTrack = number.textContent;
+    if (!input)
+        input = number.textContent;
     else
-        numberTrack += number.textContent;
-    mainScreen.textContent = numberTrack;
+        input += number.textContent;
+    mainScreen.textContent = input;
 
 }
 
